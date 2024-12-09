@@ -25,7 +25,7 @@ const commentsSchema = new mongoose.Schema({
     min: 1,
     max: 5, 
     validate: {
-      validator: Number.isInteger, // Ensures the rating is an integer
+      validator: Number.isInteger, 
       message: "{VALUE} is not an integer value",
     },
   },

@@ -39,9 +39,9 @@ attendanceSchema.pre("save", async function (next) {
       date: {
         $gte: startOfWeek,
         $lte: endOfWeek,
-        $ne: this.date, // Exclude current record
+        $ne: this.date, 
       },
-      _id: { $ne: this._id }, // Exclude current record
+      _id: { $ne: this._id }, 
     })
     .sort({ date: -1, _id: -1 });
 

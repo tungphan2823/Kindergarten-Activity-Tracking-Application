@@ -11,11 +11,11 @@ const groupsSchema = new mongoose.Schema({
   },
 });
 groupsSchema.pre("save", function (next) {
-  // Only generate slug if the name field is modified or slug is not set
+
   if (this.isModified("name") || !this.slug) {
     this.slug = slugify(this.name, {
-      lower: true, // Convert slug to lowercase
-      strict: true, // Remove special characters from the slug
+      lower: true, 
+      strict: true, 
     });
   }
   next();

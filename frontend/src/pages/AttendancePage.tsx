@@ -48,7 +48,7 @@ const AttendancePage: React.FC = () => {
     arrivalTime: "",
     departureTime: "",
     caretakerId: "",
-    monthHours: 60, // Add default value
+    monthHours: 60, 
   });
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [editFormData, setEditFormData] = useState({
@@ -58,7 +58,7 @@ const AttendancePage: React.FC = () => {
     arrivalTime: "",
     departureTime: "",
     caretakerId: "",
-    monthHours: 60, // Add default value
+    monthHours: 60, 
   });
   const attendances = useSelector(selectAttendances);
 

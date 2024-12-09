@@ -1,9 +1,9 @@
 import axios from "axios";
 import store from "../store/index";
-import { setTokens, clearTokens } from "../store/slices/authSlice"; // Import actions
+import { setTokens, clearTokens } from "../store/slices/authSlice"; 
 
 const api = axios.create({
-  baseURL: "https://thesis-backend-0hp9.onrender.com", // replace with your API's base URL
+  baseURL: "https://thesis-backend-0hp9.onrender.com", 
 });
 
 // Flag to prevent multiple refresh requests
@@ -50,7 +50,7 @@ api.interceptors.response.use(
       if (!isRefreshing) {
         isRefreshing = true;
 
-        const refreshToken = store.getState().auth.refreshToken; // Get refresh token from Redux state
+        const refreshToken = store.getState().auth.refreshToken; 
 
         if (refreshToken) {
           try {

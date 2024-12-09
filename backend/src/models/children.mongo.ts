@@ -7,7 +7,7 @@ const childrenSchema = new mongoose.Schema({
   parentId: { type: mongoose.Schema.Types.ObjectId, ref: "Users" },
   groupId: { type: mongoose.Schema.Types.ObjectId, ref: "Groups" },
   gender: { type: String, required: true },
-  monthlyTime: { type: Number, default: 60 }, // Add the new field
+  monthlyTime: { type: Number, default: 60 }, 
 });
 
 export default mongoose.model("Children", childrenSchema);

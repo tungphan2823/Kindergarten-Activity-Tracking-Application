@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import nonAva from "../assets/nonAva.jpg"; // Import the image
+import nonAva from "../assets/nonAva.jpg"; 
 import {
   fetchUsers,
   createUser,
@@ -9,7 +9,7 @@ import {
   selectUsers,
   selectLoading,
   selectError,
-} from "../store/slices/userSlice"; // Import user slice actions and selectors
+} from "../store/slices/userSlice"; 
 import { AppDispatch } from "../store/index";
 import EditIcon from "@mui/icons-material/Edit";
 import Notify from "../components/NotifyProps";
@@ -42,8 +42,8 @@ interface User {
 const UserPage = () => {
   const [reversedUsers, setReversedUsers] = useState<User[]>([]);
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
-  const [showForm, setShowForm] = useState(false); // State to show/hide form (create/edit)
-  const [isEditing, setIsEditing] = useState(false); // State to track if editing or creating
+  const [showForm, setShowForm] = useState(false); 
+  const [isEditing, setIsEditing] = useState(false); 
   const [notification, setNotification] = useState({
     show: false,
     message: "",
@@ -87,7 +87,7 @@ const UserPage = () => {
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     const day = String(date.getDate()).padStart(2, "0");
-    const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are zero-based
+    const month = String(date.getMonth() + 1).padStart(2, "0");
     const year = date.getFullYear();
     return `${day}.${month}.${year}`;
   };
@@ -144,8 +144,8 @@ const UserPage = () => {
   // Handle selecting a user to view their details (without editing)
   const handleSelectUser = (user: User) => {
     setSelectedUser(user);
-    setShowForm(false); // Ensure the form is hidden when viewing details
-    setIsEditing(false); // Not in editing mode
+    setShowForm(false); 
+    setIsEditing(false); 
   };
 
   // Handle clicking the edit icon to start editing the selected user's data
@@ -153,7 +153,7 @@ const UserPage = () => {
     setSelectedUser(user);
     setNewUser({
       username: user.username,
-      password: "", // Password should be empty for security reasons
+      password: "", 
       email: user.email,
       dateOfBirth: user.dateOfBirth,
       firstName: user.firstName,

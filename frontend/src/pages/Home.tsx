@@ -48,7 +48,7 @@ const Home = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await api.get("/auth/posts"); // Use Axios to make the request
+        const response = await api.get("/auth/posts");
 
         setPosts(response.data.userPosts);
         localStorage.setItem("userRole", response.data.userPosts.role);
@@ -63,7 +63,7 @@ const Home = () => {
   useEffect(() => {
     const fetchChildren = async (parentId: string) => {
       try {
-        const response = await api.get(`/children/parent/${parentId}`); // Use Axios for this request as well
+        const response = await api.get(`/children/parent/${parentId}`); 
         setChildren(response.data);
       } catch (error) {
         console.error("Failed to fetch children:", error);
@@ -71,7 +71,7 @@ const Home = () => {
     };
 
     if (posts && posts._id) {
-      fetchChildren(posts._id); // Ensure parentId is defined before fetching children
+      fetchChildren(posts._id); 
     }
   }, [posts]);
   console.log(children);
@@ -81,7 +81,7 @@ const Home = () => {
     }
     const date = new Date(dateString);
     const day = String(date.getDate()).padStart(2, "0");
-    const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are zero-based
+    const month = String(date.getMonth() + 1).padStart(2, "0");
     const year = date.getFullYear();
     return `${day}.${month}.${year}`;
   };

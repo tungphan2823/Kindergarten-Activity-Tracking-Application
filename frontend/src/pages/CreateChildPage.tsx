@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Notify from "../components/NotifyProps";
-import nonAva from "../assets/nonAva.jpg"; // Import the image
+import nonAva from "../assets/nonAva.jpg"; 
 import {
   fetchChildren,
   createChild,

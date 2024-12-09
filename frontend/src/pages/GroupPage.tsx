@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { fetchUsers, selectUsers } from "../store/slices/userSlice";
-import nonAva from "../assets/nonAva.jpg"; // Placeholder image
+import nonAva from "../assets/nonAva.jpg";
 import Notify from "../components/NotifyProps";
 import {
   fetchChildren,
@@ -17,7 +17,7 @@ import {
   selectGroups,
   selectLoading,
   selectError,
-} from "../store/slices/groupSlice"; // Import group slice actions and selectors
+} from "../store/slices/groupSlice";
 import { AppDispatch } from "../store/index";
 import EditIcon from "@mui/icons-material/Edit";
 import api from "../components/api";
@@ -25,7 +25,7 @@ import api from "../components/api";
 interface NewGroup {
   name: string;
   description: string;
-  caretakerId: string; // ID of caretaker (user)
+  caretakerId: string; 
 }
 
 interface CurrentUser {
@@ -50,8 +50,8 @@ interface Group {
 
 const GroupPage = () => {
   const [selectedGroup, setSelectedGroup] = useState<Group | null>(null);
-  const [showForm, setShowForm] = useState(false); // State to show/hide form (create/edit)
-  const [isEditing, setIsEditing] = useState(false); // State to track if editing or creating
+  const [showForm, setShowForm] = useState(false); 
+  const [isEditing, setIsEditing] = useState(false); 
   const [currentUser, setCurrentUser] = useState<CurrentUser | null>(null);
   const [filteredGroups, setFilteredGroups] = useState<Group[]>([]);
   const [newGroup, setNewGroup] = useState<NewGroup>({
@@ -183,12 +183,12 @@ const GroupPage = () => {
       caretakerId: group.caretakerId._id,
     });
     setIsEditing(true);
-    setShowForm(true); // Show the form for editing
+    setShowForm(true); 
   };
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     const day = String(date.getDate()).padStart(2, "0");
-    const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are zero-based
+    const month = String(date.getMonth() + 1).padStart(2, "0"); 
     const year = date.getFullYear();
     return `${day}.${month}.${year}`;
   };

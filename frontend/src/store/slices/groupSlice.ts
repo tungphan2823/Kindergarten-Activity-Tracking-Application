@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { RootState } from "../index"; // Assuming you have a RootState defined in your store
-import api from "../../components/api"; // Assuming you have an API instance like Axios
+import { RootState } from "../index";
+import api from "../../components/api"; 
 
 // Interface for Group
 interface Group {
@@ -40,8 +40,8 @@ export const fetchGroups = createAsyncThunk(
   "groups/fetchGroups",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await api.get("/groups"); // Use api instance to make a GET request
-      return response.data; // Return fetched groups data
+      const response = await api.get("/groups");
+      return response.data; 
     } catch (error) {
       if (error instanceof Error) {
         return rejectWithValue(error.message); // Access message if it's an Error object
@@ -57,12 +57,12 @@ export const createGroup = createAsyncThunk(
   "groups/createGroup",
   async (newGroupData: NewGroup, { rejectWithValue, dispatch }) => {
     try {
-      const response = await api.post("/groups", newGroupData); // Use api instance to make a POST request
+      const response = await api.post("/groups", newGroupData);
 
       // After successful creation, refetch the updated list of groups
       dispatch(fetchGroups());
 
-      return response.data; // Return newly created group data
+      return response.data; 
     } catch (error) {
       if (error instanceof Error) {
         return rejectWithValue(error.message); // Access message if it's an Error object
@@ -81,7 +81,7 @@ export const editGroup = createAsyncThunk(
     { rejectWithValue, dispatch }
   ) => {
     try {
-      const response = await api.put(`/groups/${id}`, updatedData); // Use api instance to make a PUT request
+      const response = await api.put(`/groups/${id}`, updatedData); 
 
       // After successful edit, refetch the updated list of groups
       dispatch(fetchGroups());
@@ -126,7 +126,7 @@ const groupsSlice = createSlice({
         state.loading = false;
         // Optionally add the newly created group directly to the state:
         // state.groups.push(action.payload);
-        // However, we are refetching the entire list in this case.
+        
       })
       .addCase(createGroup.rejected, (state, action) => {
         state.loading = false;
