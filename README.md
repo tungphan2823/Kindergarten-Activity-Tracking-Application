@@ -56,7 +56,7 @@ Follow these steps to set up the project locally:
 ### Backend Setup
 1. Clone the repository:
    ```bash
-   git clone [<backend-repo-url>](https://github.com/tungphan2823/Kindergarten-Activity-Tracking-Application)
+   git clone [<repo-url>](https://github.com/tungphan2823/Kindergarten-Activity-Tracking-Application)
    cd backend
    ```
 2. Install dependencies:
@@ -80,7 +80,7 @@ Follow these steps to set up the project locally:
 ### Frontend Setup
 1. Clone the repository:
    ```bash
-   git clone [<frontend-repo-url>](https://github.com/tungphan2823/Kindergarten-Activity-Tracking-Application)
+   git clone [<repo-url>](https://github.com/tungphan2823/Kindergarten-Activity-Tracking-Application)
    cd frontend
    ```
 2. Install dependencies:
