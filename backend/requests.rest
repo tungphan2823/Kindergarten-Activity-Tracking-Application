@@ -1,0 +1,45 @@
+
+GET http://localhost:3000/auth/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MmI3ODAxMjU4MzcxZmIxZjNkMTNjYSIsInVzZXJuYW1lIjoiYWRtaW40Iiwicm9sZSI6ImNhcmV0YWtlciIsImlhdCI6MTczMTE2Nzk2MCwiZXhwIjoxNzMxMTcwNjYwfQ.vjOKGR2Uz9xbCr1Ymxi5q_4u67h5tssWWEPJbDe9BWc
+###
+
+
+
+POST http://localhost:3000/auth/token
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVHVuZyIsImlhdCI6MTcyNzIxODU1OX0.F3dBeKUiYP9PqxAj1DAPa83Wvw81PyZhCfjJCLXOelA"
+}
+
+
+
+###
+
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "admin4" ,
+    "password": "admin123"
+}
+
+###
+
+DELETE http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVHVuZyIsImlhdCI6MTcyNzIxODU1OX0.F3dBeKUiYP9PqxAj1DAPa83Wvw81PyZhCfjJCLXOelA"
+}
+
+###
+
+GET http://localhost:3000/attendances
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjcxNWJmOWFhNmNjMDUyZDVlMThmZSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoicGFyZW50IiwiaWF0IjoxNzMwNjY2OTEyLCJleHAiOjE3MzA2Njc4MTJ9.p1lO48dFLZX1MNe4NMQ5RofMu3bi-QTix_rWkju7Afs
+
+###
+
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjcxNWJmOWFhNmNjMDUyZDVlMThmZSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoicGFyZW50IiwiaWF0IjoxNzMwNzY1MjI5LCJleHAiOjE3MzA3NjYxMjl9.AyrdS6WYYVDTADczAQseQjjDNwPuigkOkwEcci0i1bE
