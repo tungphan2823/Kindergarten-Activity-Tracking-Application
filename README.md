@@ -52,15 +52,17 @@ Follow these steps to set up the project locally:
 3. Install Git for version control.
 
 ---
+### Setup
 
-### Backend Setup
 1. Clone the repository:
    ```bash
    git clone [<repo-url>](https://github.com/tungphan2823/Kindergarten-Activity-Tracking-Application)
-   cd backend
    ```
+### Backend Setup
+
 2. Install dependencies:
    ```bash
+   cd backend
    npm install
    ```
 3. Create a `.env` file in the root directory with the following variables:
@@ -78,13 +80,10 @@ Follow these steps to set up the project locally:
 ---
 
 ### Frontend Setup
-1. Clone the repository:
-   ```bash
-   git clone [<repo-url>](https://github.com/tungphan2823/Kindergarten-Activity-Tracking-Application)
-   cd frontend
-   ```
+
 2. Install dependencies:
    ```bash
+   cd frontend
    npm install
    ```
 3. Start the development server:
