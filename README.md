@@ -3,7 +3,7 @@
 ## 🌟 **Overview**
 This thesis focuses on developing a **Kindergarten Activity Tracking Web Application** using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). The project aims to enhance the management of kindergarten activities by providing a secure and user-friendly platform for **managers**, **caretakers**, and **parents**. The application streamlines attendance tracking, communication, and administrative tasks while offering role-based access control for user groups.
 
-[Theseus](https://urn.fi/URN:NBN:fi:amk-202501051022)
+### [Theseus: Kindergarten Activity Tracking Web App](https://urn.fi/URN:NBN:fi:amk-202501051022)
 ---
 
 ## ✨ **Key Features**
